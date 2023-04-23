@@ -63,9 +63,9 @@ const Editar = ({ data, updateData, dataToEdit, setDataToEdit }) => {
             <table class="table table-striped">
                 <thead class="table-dark">
                     <tr>
-                        <th scope="col">Nombre y Apellido</th>
-                        <th scope="col">Email</th>
-                        <th scope="col">Cargo</th>
+                        <th scope="col">Tarea</th>
+                        <th scope="col">Descripcion</th>
+                        <th scope="col">fecha</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -89,7 +89,7 @@ const Editar = ({ data, updateData, dataToEdit, setDataToEdit }) => {
                         onClick={handleChange} checked={form.check} id="flexCheckDefault" />
                 </div>
                 <div class="form-group">
-                    <label class="form-label">Nombre :</label>
+                    <label class="form-label">Tarea :</label>
                     <input
                         class="form-control"
                         type="text"

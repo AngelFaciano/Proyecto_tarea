@@ -73,7 +73,7 @@ function App() {
     setDb(newData);
   };
   const deleteData = (id) => {
-    let isDelete = window.confirm('Estas Seguro que quiere eliminar al empleado');
+    let isDelete = window.confirm('Estas Seguro que quiere eliminar la tarea');
     if (isDelete) {
       let newData = db.filter(el => el.id !== id)
       setDb(newData)
