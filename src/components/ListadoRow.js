@@ -9,7 +9,7 @@ const ListadoRow = ({el,deleteData}) =>{
         <th scope="row"><input
                     class="ml-2"
                     type="checkbox"
-                    name="nombre"
+                    name="check"
                     checked={el.check}
                     />{el.nombre}</th>
         <td>{el.descripcion}</td>

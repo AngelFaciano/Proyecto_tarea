@@ -30,7 +30,7 @@ const initialBd = [
 ]
 const initailForm={     
     nombre:"",
-    id:null,
+    ids:null,
   };
 
 function App() {
@@ -61,6 +61,7 @@ function App() {
   };
   const createUsuario = (data) => {
     data.id = Date.now();
+    initailForm.nombre=form.nombre
     setForm([...db, data])
   };
 
@@ -81,7 +82,7 @@ function App() {
     } else { return }
   };
   return (
-    <BrowserRouter>{form.id===null?<div></div>:
+    <BrowserRouter>{form.ids===null?<div></div>:
     <div>
       <nav class="navbar navbar-expand-sm bg-black navbar-dark">
         <ul class="navbar-nav">
@@ -99,12 +100,12 @@ function App() {
     </div>}
       
       
-      <h1 class="text-center mt-2 mb-3" >{form.id===null?<div>Gestion De Tarea</div>:<div>Tarea a Realizar </div> }</h1>
+      <h1 class="text-center mt-2 mb-3" >{form.id===null?<div>Gestion De Tarea</div>:<div>Tarea para: {initailForm.nombre} </div> }</h1>
       <div class="container">
         <Routes>
           <Route path="/" element={<div>
             
-            {form.id===null?<div><h3 class="text-center">Rellene el campo de nombre  asi acceda al campo de tarea</h3>
+            {form.ids===null?<div><h3 class="text-center">Rellene el campo de nombre  asi acceda al campo de tarea</h3>
             <form onSubmit={handleSubmit}>
                 
                 <div class="form-group">
