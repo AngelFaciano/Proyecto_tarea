@@ -46,7 +46,7 @@ const Editar = ({ data, updateData, dataToEdit, setDataToEdit }) => {
 
     return <div>{form.id === null ?
         <div>
-            <h2 class="text-center mb-3">Eliga una Tarea para editar</h2>
+            <h2 class="text-center mb-3">Eliga una Tarea para Editar</h2>
             <table class="table table-striped">
                 <thead class="table-dark">
                     <tr>
