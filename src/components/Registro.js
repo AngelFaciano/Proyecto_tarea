@@ -27,8 +27,10 @@ const Registro=({createData})=>{
         navigate('/listado');
         handleReset();
     };
-    const handleReset=(_e)=>{
+    const handleReset = (e) => {
+        
         setForm(initailForm);
+
     };
 
 
@@ -70,7 +72,7 @@ const Registro=({createData})=>{
                 </div>
                 <br/>
                 <div class="d-flex justify-content-center">
-                    <div><button  type="submit" class="btn btn-success">Guardar Tarea</button> <button type="reset" class="btn btn-success" onclick={handleReset}>Limpiar Campos</button></div>
+                    <div><button  type="submit" class="btn btn-primary">Guardar Empleado</button> <button type="reset" class="btn btn-primary" onClick={handleReset}>Limpiar Campos</button></div>
                     </div>
             </form>
 

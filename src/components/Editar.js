@@ -15,8 +15,13 @@ const Editar = ({ data, updateData, dataToEdit, setDataToEdit }) => {
     const handleChange = (e) => {
         setForm({
             ...form,
-            [e.target.name]: e.target.value,
             [e.target.name]: e.target.checked,
+        })
+    };
+    const handleChanges = (e) => {
+        setForm({
+            ...form,
+            [e.target.name]: e.target.value,
         })
     };
 
@@ -63,9 +68,9 @@ const Editar = ({ data, updateData, dataToEdit, setDataToEdit }) => {
             <table class="table table-striped">
                 <thead class="table-dark">
                     <tr>
-                        <th scope="col">Tarea</th>
-                        <th scope="col">Descripcion</th>
-                        <th scope="col">fecha</th>
+                        <th scope="col">Nombre y Apellido</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Cargo</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -89,12 +94,12 @@ const Editar = ({ data, updateData, dataToEdit, setDataToEdit }) => {
                         onClick={handleChange} checked={form.check} id="flexCheckDefault" />
                 </div>
                 <div class="form-group">
-                    <label class="form-label">Tarea :</label>
+                    <label class="form-label">Nombre :</label>
                     <input
                         class="form-control"
                         type="text"
                         name="nombre"
-                        onChange={handleChange}
+                        onChange={handleChanges}
                         value={form.nombre}
                         required
                     />
@@ -106,7 +111,7 @@ const Editar = ({ data, updateData, dataToEdit, setDataToEdit }) => {
                         class="form-control"
                         type="text"
                         name="descripcion"
-                        onChange={handleChange}
+                        onChange={handleChanges}
                         value={form.descripcion} required
                     />
 
@@ -117,7 +122,7 @@ const Editar = ({ data, updateData, dataToEdit, setDataToEdit }) => {
                         class="form-control"
                         type="date"
                         name="fecha"
-                        onChange={handleChange}
+                        onChange={handleChanges}
                         value={form.fecha} required
                     />
                 </div>
